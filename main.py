@@ -67,7 +67,7 @@ if selected == 'ChatBot':
             # Display Gemini-Pro's response
             with st.chat_message("assistant"):
                 st.markdown(gemini_response.text)
-    except Exception as e: st.error('This is an error', icon="🚨")
+    except Exception as e: st.error('Tizimda xatolik bor birozdan so\'ng urinib ko\'ring', icon="🚨")
 
 
 # Image captioning page
@@ -87,14 +87,14 @@ if selected == "Suratga Izoh":
                 resized_img = image.resize((800, 500))
                 st.image(resized_img)
 
-            default_prompt = "Manashu rasmga qisqacha izoh yozib bering o'zbek tilida"  # change this prompt as per your requirement
+            default_prompt = "Manashu rasmga qisqacha izoh yozib bering"  # change this prompt as per your requirement
 
             # get the caption of the image from the gemini-pro-vision LLM
             caption = gemini_pro_vision_response(default_prompt, image)
 
             with col2:
                 st.info(caption)
-        except Exception as e: st.error('This is an error', icon="🚨")
+        except Exception as e: st.error('Tizimda xatolik bor birozdan so\'ng urinib ko\'ring', icon="🚨")
 
 
 # text embedding model
@@ -109,7 +109,7 @@ if selected == "Matnni joylashtirish":
         if st.button("Javob olish"):
             response = embeddings_model_response(user_prompt)
             st.markdown(response)
-    except Exception as e: st.error('This is an error', icon="🚨")
+    except Exception as e: st.error('Tizimda xatolik bor birozdan so\'ng urinib ko\'ring', icon="🚨")
 
 
 # text embedding model
@@ -124,4 +124,4 @@ if selected == "Biror narsa so\'rang":
         if st.button("Javob olish"):
             response = gemini_pro_response(user_prompt)
             st.markdown(response)
-    except Exception as e: st.error('This is an error', icon="🚨")
+    except Exception as e: st.error('Tizimda xatolik bor birozdan so\'ng urinib ko\'ring', icon="🚨")
