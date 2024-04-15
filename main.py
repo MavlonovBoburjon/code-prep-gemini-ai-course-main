@@ -17,6 +17,24 @@ st.set_page_config(
     page_icon="🧠",
     layout="centered",
 )
+footer= """<style>
+a:link , a:visited{
+}
+
+.footer {
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+color: white;
+text-align: center;
+}
+</style>
+<div class="footer">
+<p>Mavlonov Boburjon tomonidan ishlab chiqilgan ❤ </p>
+</div>
+"""
+st.markdown(footer, unsafe_allow_html=True)
 
 with st.sidebar:
     selected = option_menu('Deep Gemini AI',
