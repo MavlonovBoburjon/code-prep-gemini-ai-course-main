@@ -87,7 +87,7 @@ if selected == "Suratga Izoh":
                 resized_img = image.resize((800, 500))
                 st.image(resized_img)
 
-            default_prompt = "Manashu rasmga qisqacha izoh yozib bering"  # change this prompt as per your requirement
+            default_prompt = "Manashu rasmga qisqacha izoh yozib bering o'zbek tilida"  # change this prompt as per your requirement
 
             # get the caption of the image from the gemini-pro-vision LLM
             caption = gemini_pro_vision_response(default_prompt, image)
