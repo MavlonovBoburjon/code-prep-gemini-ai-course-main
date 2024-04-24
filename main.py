@@ -31,7 +31,7 @@ text-align: center;
 }
 </style>
 <div class="footer">
-<p>Mavlonov Boburjon tomonidan ishlab chiqilgan ❤ </p>
+<p>Do'schanov Murodjon tomonidan ishlab chiqilgan ❤ </p>
 </div>
 """
 st.markdown(footer, unsafe_allow_html=True)
@@ -105,7 +105,7 @@ if selected == "Suratga Izoh":
                 resized_img = image.resize((800, 500))
                 st.image(resized_img)
 
-            default_prompt = "ushbu rasmga qisqacha izoh yozing"  # change this prompt as per your requirement
+            default_prompt = "write a short caption for this picture in english or russian"  # change this prompt as per your requirement
 
             # get the caption of the image from the gemini-pro-vision LLM
             caption = gemini_pro_vision_response(default_prompt, image)
@@ -121,7 +121,7 @@ if selected == "Matnni joylashtirish":
     st.title("🔡 Matn joylashtiring")
 
     # text box to enter prompt
-    user_prompt = st.text_area(label='', placeholder="O'rnatishlarni olish uchun matnni kiriting")
+    user_prompt = st.text_area(label='', placeholder="Raqamli tahlil olish uchun matnni kiriting")
 
     try:
         if st.button("Javob olish"):
@@ -134,6 +134,7 @@ if selected == "Matnni joylashtirish":
 if selected == "Biror narsa so\'rang":
 
     st.title("❓ Menga savol bering")
+
 
     # text box to enter prompt
     user_prompt = st.text_area(label='', placeholder="Biror narsa so\'rang...")
