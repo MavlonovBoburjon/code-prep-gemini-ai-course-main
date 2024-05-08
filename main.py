@@ -43,7 +43,7 @@ with st.sidebar:
                             'Matnni joylashtirish',
                             'Biror narsa so\'rang'],
                            menu_icon='robot',
-                           icons=['chat-dots-fill', 'image-fill', 'textarea-t', 'patch-question-fill'],
+                           icons=['chat-dots-fill', 'textarea-t', 'patch-question-fill'],
                            default_index=0
                            )
 
